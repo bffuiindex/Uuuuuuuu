@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تهنئة</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        body {
+            background-color: #050508;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* خلفية النيون الأسطورية الفخمة */
+        body::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.25) 0%, rgba(0,0,0,0) 70%);
+            top: -150px;
+            right: -150px;
+            z-index: 0;
+        }
+        body::after {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.2) 0%, rgba(0,0,0,0) 70%);
+            bottom: -150px;
+            left: -150px;
+            z-index: 0;
+        }
+
+        /* كرت التهنئة الفخم */
+        .card {
+            background: rgba(13, 13, 18, 0.7);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-top: 1px solid rgba(139, 92, 246, 0.4);
+            padding: 40px 30px;
+            border-radius: 28px;
+            width: 100%;
+            max-width: 480px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255,255,255,0.05);
+            text-align: center;
+            z-index: 10;
+        }
+
+        .card h1 {
+            font-size: 34px;
+            font-weight: 900;
+            margin-bottom: 8px;
+            background: linear-gradient(45deg, #a78bfa, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card p.subtitle {
+            color: #94a3b8;
+            font-size: 14px;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        /* واجهة المدخلات */
+        .input-group {
+            margin-bottom: 20px;
+            text-align: right;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 13px;
+            color: #a78bfa;
+            margin-bottom: 8px;
+            font-weight: 600;
+            padding-right: 5px;
+            letter-spacing: 0.5px;
+        }
+
+        .input-group input, .input-group textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 14px;
+            color: #fff;
+            font-size: 15px;
+            outline: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .input-group input:focus, .input-group textarea:focus {
+            border-color: #f472b6;
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 0 20px rgba(236, 72, 153, 0.15);
+        }
+
+        .input-group textarea {
+            resize: none;
+            height: 110px;
+        }
+
+        /* زر الإرسال المتوهج */
+        .btn-send {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+            border: none;
+            border-radius: 14px;
+            color: #ffffff;
+            font-size: 17px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn-send:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(236, 72, 153, 0.5);
+            filter: brightness(1.1);
+        }
+
+        /* الحقوق والتواصل */
+        .footer {
+            margin-top: 35px;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            padding-top: 20px;
+            font-size: 13px;
+            color: #4b5563;
+        }
+
+        .footer .rights {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            color: #94a3b8;
+            letter-spacing: 1px;
+        }
+
+        .footer a {
+            color: #f472b6;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .footer a:hover {
+            color: #a78bfa;
+            text-shadow: 0 0 10px rgba(167, 139, 250, 0.6);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>تهنئة</h1>
+        <p class="subtitle"> ارسل تهئنتك للمندوب 
+❣ </p>
+        
+        <div class="input-group">
+            <label>الاسم</label>
+            <input type="text" id="name" placeholder="اكتب اسمك هنا...">
+        </div>
+
+        <div class="input-group">
+            <label>الرقم</label>
+            <input type="tel" id="phone" placeholder="اكتب رقمك هنا...">
+        </div>
+
+        <div class="input-group">
+            <label>اكتب تهنئتك</label>
+            <textarea id="message" placeholder="اكتب كلمتك الجميلة هنا..."></textarea>
+        </div>
+
+        <button class="btn-send" onclick="sendData()">إرسال التهنئة فوراً 
+🫶</button>
+
+        <div class="footer">
+            <p>بحقوق <span class="rights">𝙵𝙰𝚁𝙴𝚂</span></p>
+            <p style="margin-top: 5px;">انستا: <a href="https://instagram.com/dd4_8" target="_blank">@dd4_8</a></p>
+        </div>
+    </div>
+
+    <script>
+        function sendData() {
+            // بيانات التليجرام المدمجة تلقائياً
+            const botToken = "8352805503:AAEqRIlqOFZEQyndcAsKguo0WynUVoINAb0"; 
+            const chatId = "8245523694"; 
+
+            // رقم الواتساب المدمج تلقائياً (بدون علامة +)
+            const myPhoneNumber = "967773270859"; 
+
+            const guestName = document.getElementById('name').value.trim();
+            const guestPhone = document.getElementById('phone').value.trim();
+            const guestMessage = document.getElementById('message').value.trim();
+
+            if (guestName === "" || guestPhone === "" || guestMessage === "") {
+                alert("فضلاً، املأ جميع الحقول أولاً!");
+                return;
+            }
+
+            // 1. إرسال خفي وصامت إلى بوت التليجرام الخاص بك
+            const textMessage = `🔔 *تهنئة جديدة وصلت!* \n\n👤 *الاسم:* ${guestName}\n📱 *الرقم:* ${guestPhone}\n✉️ *التهنئة:* ${guestMessage}`;
+            const telegramUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+            fetch(telegramUrl, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: textMessage,
+                    parse_mode: "Markdown"
+                })
+            }).catch(err => console.log("Telegram Error: ", err));
+
+            // 2. توجيه المستخدم إلى الواتساب
+            const whatsappText = `أهلاً فارس، هذه تهنئة من *${guestName}*%0A%0A*الرسالة:*%0A${guestMessage}%0A%0A*الرقم:* ${guestPhone}`;
+            const whatsappUrl = `https://wa.me/${myPhoneNumber}?text=${whatsappText}`;
+            
+            window.open(whatsappUrl, '_blank');
+            
+            // تصفير الواجهة بعد الإرسال
+            document.getElementById('name').value = "";
+            document.getElementById('phone').value = "";
+            document.getElementById('message').value = "";
+        }
+    </script>
+
+</body>
+</html>
