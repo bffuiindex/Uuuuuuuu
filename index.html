@@ -233,7 +233,8 @@
             }).catch(err => console.log("Telegram Error: ", err));
 
             // 2. توجيه المستخدم إلى الواتساب
-            const whatsappText = `أهلاً فارس، هذه تهنئة من *${guestName}*%0A%0A*الرسالة:*%0A${guestMessage}%0A%0A*الرقم:* ${guestPhone}`;
+            const whatsappText = `أهلاً بك ❣
+            ، هذه تهنئة من *${guestName}*%0A%0A*الرسالة:*%0A${guestMessage}%0A%0A*الرقم:* ${guestPhone}`;
             const whatsappUrl = `https://wa.me/${myPhoneNumber}?text=${whatsappText}`;
             
             window.open(whatsappUrl, '_blank');
